@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco DJS</title>
+    <link rel="stylesheet" href="./scss/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" 
+    rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e9685f6155.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title header__title--fontStyle">DJS <span class="header__title__name header__title__name--size">Bank</span></h1>
+        <h1 class="header__title header__title--fontStyle">Bienvenido, 
+            <button id="button__Iniciar__sesion" class="header__buttonIniciar">Iniciar Sesión</button>
+        </h1>
+    </header>
+
+    
+
+    <div id="buttons" class="buttons__space"></div>
+    
+    <section class="letters__space">
+        <img src="/assets/img/img-banner-normal+2.png" alt="">  
+        <div>
+        <span class="letters__space__Info">Generamos un impacto positivo en la sociedad, transformando la vida de las personas que hacen parte de los diferentes programas y esquemas que apoyamos en nuestra organización.</span>
+        </div>
+    </section>
+    <div class="login">
+        <dialog id="login__popUp" class="login__popUp">
+        <form action="" class="login__form">
+            <h1 class="login__title">Iniciar Sesión</h1>
+            <span class="login__title--description">Por favor inicie sesión</span>
+        <div class="login__input">
+            <input type="text" placeholder="Nombre de usuario o Correo electronico">
+        </div>
+        <div class="login__input">
+            <input type="password" placeholder="Contraseña">
+        </div>
+        <div class="login__buttons">
+
+            <input type="button" value="Iniciar Sesíon" id="IniciarSesion" class="login__buttons__form" onclick="iniciarSesion()">
+
+            <button class="login__buttons__form"> Registrarse</button>
+        </div>
+    </dialog>
+    </div>
+
+
+    <script src="./assets/js/popUp.js"></script>
+    
+</body>
+</html>

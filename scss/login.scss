@@ -1,83 +1,103 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
 }
 
-.header{
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.header {
     background-color: gray;
     height: 4rem;
     display: flex;
     justify-content: space-between;
-    &__title{
+
+    &__title {
         font-size: 18px;
         margin-top: 1rem;
         margin-right: 2rem;
         margin-left: 2rem;
-        &__name{
+
+        &__name {
             color: white;
-            &--size{
+
+            &--size {
                 font-size: 24px;
             }
         }
-        &--fontStyle{
+
+        &--fontStyle {
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
     }
-    &__buttonIniciar{
+
+    &__buttonIniciar {
         background-color: rgb(224, 224, 224);
         border: none;
         border-radius: 45px;
         width: 7rem;
         height: 2rem;
         cursor: pointer;
-        &:hover{
+
+        &:hover {
             transition: 600ms;
             background-color: black;
             color: white;
         }
     }
 }
-.login__title{
+
+.login__title {
     text-align: center;
     font-size: 22px;
 }
-.login{
+
+.login {
     display: flex;
     padding: 8rem;
     justify-content: center;
-    &__title{
+
+    &__title {
         margin-top: 1rem;
     }
-    &__input{
-    margin: 1.5rem 0;
-        input{
+
+    &__input {
+        margin: 1.5rem 0;
+
+        input {
             height: 2rem;
             width: 15rem;
             background-color: rgb(224, 224, 224);
             border: none;
         }
     }
-    &__buttons{
+
+    &__buttons {
         text-align: center;
         margin-left: 0.7rem;
-        &__form{
-            margin-right:1rem;
+
+        &__form {
+            margin-right: 1rem;
             width: 5rem;
             height: 2rem;
             background-color: gray;
             border-radius: 45px;
             border: none;
-            color:white;
+            color: white;
             cursor: pointer;
-            &:hover{
+
+            &:hover {
                 background-color: black;
                 color: white;
                 transition: 600ms;
             }
         }
     }
-    &__popUp{
+
+    &__popUp {
         top: 10rem;
         left: 30rem;
         width: 30ch;
@@ -85,69 +105,90 @@
         border: none;
         border-top-left-radius: 10%;
         border-bottom-right-radius: 10%;
-        &--space{
-        top: 8rem;
-        height: 40ch;
+        box-shadow: 1px 1px 30px;
+
+        &--space {
+            top: 8rem;
+            height: 40ch;
         }
     }
-    &__form{
+
+    &__form {
         text-align: center;
-        
     }
 }
 
-.letters__space{
-    display: flex;
-    width: 100ch;
-    margin-left: 10rem;
+.letters {
     margin-top: 2rem;
-    background-color: rgb(224, 224, 224);
-    border-radius: 10px;
-    box-shadow: 3px 4px 10px;
-    &__Info{
+    margin-left: 10rem;
+    height: 350px;
+    width: 879px;
+    &__space {
+        display: flex;
+        width: 100ch;
+        background-color: rgb(224, 224, 224);
+        border-radius: 10px;
+        box-shadow: 3px 4px 10px;
+        
+    
+
+    &__Info {
         display: flex;
         font-size: 22px;
         text-align: center;
         margin-left: 1rem;
         margin-right: 1rem;
         margin-top: 6rem;
-        
+
     }
-    img{
+
+    img {
         width: 20rem;
         height: 20rem;
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
     }
 }
+}
 
-.buttons__space{
-display: flex;
-justify-content: center;
-margin-top: 3rem;
-&__transfer{
-    margin: 0 1rem;
-    width: 10rem;
-    height: 4rem;
+.section__Butons {
+    display: flex;
     background-color: rgb(224, 224, 224);
-    border: none;
-    border-radius: 10px;
-    box-shadow: 3px 4px 10px;
-    cursor: pointer;
-    font-size: 16px;
-    display: block;
-    &:hover{
-        transition: 600ms;
-        background-color: rgb(72, 72, 72);
-        color: white;
-        box-shadow: 3px 4px 10px black;
+    width: 64%;
+    padding: 1rem;
+    border-radius: 45px;
+    box-shadow: 0 0 5px;
+}
+
+.buttons__space {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+
+    &__transfer {
+        margin: 0 1rem;
+        width: 10rem;
+        height: 4rem;
+        background-color: rgb(224, 224, 224);
+        border: none;
+        border-radius: 10px;
+        box-shadow: 3px 4px 10px;
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 16px;
+        display: block;
+
+        &:hover {
+            transition: 600ms;
+            background-color: rgb(113, 113, 113);
+            color: white;
+            box-shadow: 3px 4px 10px black;
+        }
     }
 }
-}
 
-.icons{
+.icons {
     display: block;
     font-size: 20px;
     color: black;
 }
-

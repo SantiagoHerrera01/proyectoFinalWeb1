@@ -5,11 +5,58 @@
 
 .section {
   display: flex;
+  justify-content: center;
   position: absolute;
   background-color: rgb(211, 211, 211);
   width: 50%;
-  height: 80%;
+  max-height: 90%;
   left: 18rem;
   top: 5rem;
   box-shadow: 1px 1px 10px;
+  border-radius: 45px;
+}
+.section__title {
+  text-align: center;
+}
+.section__space {
+  display: flex;
+  justify-content: center;
+  height: 510px;
+}
+.section__form {
+  align-items: center;
+  margin-top: 1rem;
+}
+.section__inputs {
+  padding: 0.3rem 0;
+}
+.section__inputs--size {
+  width: 70ch;
+  height: 2rem;
+  border: none;
+  box-shadow: 0 0 3px;
+  border-radius: 45px;
+}
+.section__spaceTitle {
+  margin-bottom: 1rem;
+}
+.section__Buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+.section__ButtonsStyle {
+  width: 10rem;
+  height: 3rem;
+  margin-right: 1rem;
+  background-color: rgb(129, 129, 129);
+  color: white;
+  border: none;
+  border-radius: 45px;
+  cursor: pointer;
+}
+.section__ButtonsStyle:hover {
+  transition: 600ms;
+  background-color: black;
 }/*# sourceMappingURL=transferencias.css.map */

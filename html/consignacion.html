@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../scss/transferencias.css">
     <link rel="stylesheet" href="../scss/login.css">
+    <link rel="stylesheet" href="../scss/retiros.css">
 </head>
 
 <body>
@@ -19,20 +20,28 @@
         <h1 class="header__title header__title--fontStyle">Bienvenido,
         </h1>
     </header>
-    <div class="section">
-        <section>
-            <form action="">
-                <label for="">Numero de cuenta</label>
-                <div>
-                    <input type="number" placeholder="Digite su número de cuenta">
-                </div>
-                <div>
-                    <a href=""><img src="" alt="">PSE</a>
-                    <a href="">Otro banco</a>
-                    <a href="">Punto Fisico</a>
-                </div>
+    <div class="section section--position">
+        <section class="section__spaceR">
+            <div class="section__spaceTitle">
+                <h2 class="section__title">Consignar Dinero</h2>
+            </div>
 
-                <input type="submit" name="" id="" value="Consignar">
+            <div class="section__spaceTitle">
+                <span>Su dinero total es: "DineroCliente"</span>
+            </div>
+
+            <form action="" class="section__form">
+                <label class="section__spaceTitle" for="">Numero de cuenta</label>
+                <div class="section__inputs">
+                    <input class="section__inputs--size" type="number" placeholder="Digite su número de cuenta">
+                </div>
+                <label class="section__spaceTitle">¿Cuánto?</label>
+                <div class="section__inputs">
+                    <input class="section__inputs--size" type="number" placeholder="Cuanto desea Consignar">
+                </div>
+                <div class="section__Buttons">
+                    <input class="section__ButtonsStyle" type="submit" name="" id="" value="Consignar">
+                </div>
             </form>
         </section>
 

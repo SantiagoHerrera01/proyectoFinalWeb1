@@ -4,6 +4,11 @@
   font-family: "Roboto", sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .header {
   background-color: gray;
   height: 4rem;
@@ -88,6 +93,7 @@
   border: none;
   border-top-left-radius: 10%;
   border-bottom-right-radius: 10%;
+  box-shadow: 1px 1px 30px;
 }
 .login__popUp--space {
   top: 8rem;
@@ -97,11 +103,15 @@
   text-align: center;
 }
 
+.letters {
+  margin-top: 2rem;
+  margin-left: 10rem;
+  height: 350px;
+  width: 879px;
+}
 .letters__space {
   display: flex;
   width: 100ch;
-  margin-left: 10rem;
-  margin-top: 2rem;
   background-color: rgb(224, 224, 224);
   border-radius: 10px;
   box-shadow: 3px 4px 10px;
@@ -121,6 +131,15 @@
   border-bottom-left-radius: 10px;
 }
 
+.section__Butons {
+  display: flex;
+  background-color: rgb(224, 224, 224);
+  width: 64%;
+  padding: 1rem;
+  border-radius: 45px;
+  box-shadow: 0 0 5px;
+}
+
 .buttons__space {
   display: flex;
   justify-content: center;
@@ -134,13 +153,14 @@
   border: none;
   border-radius: 10px;
   box-shadow: 3px 4px 10px;
+  text-decoration: none;
   cursor: pointer;
   font-size: 16px;
   display: block;
 }
 .buttons__space__transfer:hover {
   transition: 600ms;
-  background-color: rgb(72, 72, 72);
+  background-color: rgb(113, 113, 113);
   color: white;
   box-shadow: 3px 4px 10px black;
 }

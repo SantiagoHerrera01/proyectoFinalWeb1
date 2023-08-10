@@ -26,6 +26,7 @@ const iniciarSesion = ()=>{
     popUp.close()
     buttons.innerHTML=
     `
+    <div class="section__Butons">
     <a href="/html/transferencias.html"><button class="buttons__space__transfer"><div><i class="fa-solid fa-money-bill-transfer icons"></i></div>Transferir Dinero</button></a>
 
     <a href="/html/retiros.html"><button class="buttons__space__transfer"><div><i class="fa-solid fa-down-long icons"></i></div>Retirar Dinero </button></a>
@@ -33,6 +34,7 @@ const iniciarSesion = ()=>{
     <a href="/html/consignacion.html"><button class="buttons__space__transfer"><div><i class="fa-solid fa-hand-holding-dollar icons"></i></div>Consignar Dinero</button></a>
 
     <a href="/html/movimientos.html"><button class="buttons__space__transfer"><div><i class="fa-solid fa-receipt icons"></i></div> Movimientos</button></a>
+    </div>
     `
     buttons.appendChild(buttons)
 }

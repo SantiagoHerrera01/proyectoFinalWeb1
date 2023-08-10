@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../scss/transferencias.css">
+    <link rel="stylesheet" href="../scss/login.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="/index.html"><h1 class="header__title header__title--fontStyle">DJS <span class="header__title__name header__title__name--size">Bank</span></h1></a>
+        <h1 class="header__title header__title--fontStyle">Bienvenido, 
+        </h1>
+    </header>
+
+    <div class="section">
+        <section>
+            <h2>Tranferir dinero</h2>
+
+            <form action="">
+            <div>
+                <input type="text" placeholder="Nombre de quien recibe">
+            </div>
+            <div>
+                <select name="tipoDocId" id="docId">
+                    <option value="">Seleccionar...</option>
+                    <option value="Cc">Cedula de ciudadanía</option>
+                    <option value="">Cedula Extranjería</option>
+                    <option value="">NIT</option>
+                </select>
+            </div>
+            <div>
+                <input type="text" placeholder="Documento de esa persona/NIT ">
+            </div>
+            <div>
+                <select name="tipoCuenta" id="cuenta">
+                    <option value="">Seleccionar...</option>
+                    <option value="">Ahorros</option>
+                    <option value="">Corriente</option>
+                </select>
+            </div>
+            <div>
+                <input type="text" placeholder="Numero de cuenta">
+            </div>
+
+            <div>
+                <input type="text" placeholder="¿Cuánto?">
+            </div>
+        </form>
+        </section>
+    </div>
+    
+</body>
+</html>

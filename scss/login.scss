@@ -85,6 +85,10 @@
         border: none;
         border-top-left-radius: 10%;
         border-bottom-right-radius: 10%;
+        &--space{
+        top: 8rem;
+        height: 40ch;
+        }
     }
     &__form{
         text-align: center;

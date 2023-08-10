@@ -89,6 +89,10 @@
   border-top-left-radius: 10%;
   border-bottom-right-radius: 10%;
 }
+.login__popUp--space {
+  top: 8rem;
+  height: 40ch;
+}
 .login__form {
   text-align: center;
 }

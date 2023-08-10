@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.section{
+    display: flex;
+    position: absolute;
+    background-color: rgb(211, 211, 211);
+    width: 50%;
+    height: 80%;
+    left: 18rem;
+    top: 5rem;
+    box-shadow: 1px 1px 10px;
+}

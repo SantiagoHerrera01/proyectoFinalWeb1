@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" 
     rel="stylesheet">
     <script src="https://kit.fontawesome.com/e9685f6155.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
 </head>
 <body>
@@ -17,21 +18,38 @@
         <h1 class="header__title header__title--fontStyle">DJS <span class="header__title__name header__title__name--size">Bank</span></h1>
         <h1 class="header__title header__title--fontStyle">Bienvenido, 
             <button id="button__Iniciar__sesion" class="header__buttonIniciar">Iniciar Sesión</button>
+
+            <button class="header__buttonIniciar" id="registrarU" onclick="registrarUsuario()"> Registrarse</button>
         </h1>
     </header>
 
-    
+    <!-- <form action="">
+        <div>
+            <label for="NombreUsuario">Nombre</label>
+            <input type="text" placeholder="Nombre">
+        </div>
+        <div>
+            <label for="ApellidoUsuario">Apellido</label>
+            <input type="text" placeholder="Apellido">
+        </div>
+        <div>
+            <label for="CorreoUsuario">Correo</label>
+            <input type="text" placeholder="Correo">
+        </div>
+    </form> -->
 
     <div id="buttons" class="buttons__space"></div>
-    
+
     <section class="letters__space">
         <img src="/assets/img/img-banner-normal+2.png" alt="">  
         <div>
         <span class="letters__space__Info">Generamos un impacto positivo en la sociedad, transformando la vida de las personas que hacen parte de los diferentes programas y esquemas que apoyamos en nuestra organización.</span>
         </div>
     </section>
-    <div class="login">
+    <!-- <div class="login"> -->
+
         <dialog id="login__popUp" class="login__popUp">
+
         <form action="" class="login__form">
             <h1 class="login__title">Iniciar Sesión</h1>
             <span class="login__title--description">Por favor inicie sesión</span>
@@ -45,11 +63,12 @@
 
             <input type="button" value="Iniciar Sesíon" id="IniciarSesion" class="login__buttons__form" onclick="iniciarSesion()">
 
-            <button class="login__buttons__form"> Registrarse</button>
+            <button class="login__buttons__form" id="buttonCancel"> Cancelar</button>
         </div>
     </dialog>
-    </div>
+    <!-- </div> -->
 
+    <dialog class="login__popUp login__popUp--space" id="popUpDos"></dialog>
 
     <script src="./assets/js/popUp.js"></script>
     

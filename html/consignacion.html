@@ -33,20 +33,21 @@
             <form action="" class="section__form">
                 <label class="section__spaceTitle" for="">Numero de cuenta</label>
                 <div class="section__inputs">
-                    <input class="section__inputs--size" type="number" placeholder="Digite su número de cuenta">
+                    <input class="section__inputs--size" type="number" id="cuenta" placeholder="Digite su número de cuenta">
                 </div>
                 <label class="section__spaceTitle">¿Cuánto?</label>
                 <div class="section__inputs">
-                    <input class="section__inputs--size" type="number" placeholder="Cuanto desea Consignar">
+                    <input class="section__inputs--size" type="number" id="cantidad" placeholder="Cuanto desea Consignar">
                 </div>
                 <div class="section__Buttons">
-                    <input class="section__ButtonsStyle" type="submit" name="" id="" value="Consignar">
+                    <button class="section__ButtonsStyle" id="consignar" onclick="consignarDinero()">Consignar</button>
                 </div>
             </form>
         </section>
 
     </div>
 
+    <script src="../assets/js/consignar.js"></script>
 </body>
 
 </html>

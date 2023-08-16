@@ -30,25 +30,30 @@
                 </div>
 
                 <div class="section__spaceTitle">
-                    <span>Su dinero total es: "DineroCliente"</span>
+                    <span id="saldoLabel">Su dinero total es: "DineroCliente"</span>
                 </div>
 
+                <label for="">Cuenta </label>
+                <div class="section__inputs">
+                    <input class="section__inputs--size" type="number" id="cuenta" placeholder="Cuenta de la cual retirar" >
+                </div>
                 <label for="">¿Cuánto? </label>
                 <div class="section__inputs">
-                    <input class="section__inputs--size" type="number" placeholder="Digite el dinero a retirar">
+                    <input class="section__inputs--size" type="number" id="retiro"  placeholder="Digite el dinero a retirar" >
                 </div>
                 <label>Pin: </label>
                 <div class="section__inputs">
-                    <input class="section__inputs--size" type="password" placeholder="Ingrese su pin">
+                    <input class="section__inputs--size" type="password" id="contraseña"  placeholder="Ingrese su pin">
                 </div>
                 <div class="section__Buttons">
-                    <input class="section__ButtonsStyle" type="submit" value="Aceptar">
+                    <input id="btnAceptar" class="section__ButtonsStyle" value="Aceptar" onclick="retirarDinero()">
                     <input class="section__ButtonsStyle" type="button" value="Cancelar">
                 </div>
             </form>
         </section>
     </div>
 
+    <script src="../assets/js/retirar.js"></script>
 </body>
 
 </html>

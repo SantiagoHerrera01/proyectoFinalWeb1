@@ -1,75 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../scss/transferencias.css">
-    <link rel="stylesheet" href="../scss/login.css">
-</head>
+    <link rel="stylesheet" href="../scss/transferencias.css" />
+    <link rel="stylesheet" href="../scss/login.css" />
+  </head>
 
-<body>
-
+  <body>
     <header class="header">
-        <a href="/index.html">
-            <h1 class="header__title header__title--fontStyle">DJS <span
-                    class="header__title__name header__title__name--size">Bank</span></h1>
-        </a>
-        <h1 class="header__title header__title--fontStyle">Bienvenido,
+      <a href="/index.html">
+        <h1 class="header__title header__title--fontStyle">
+          DJS
+          <span class="header__title__name header__title__name--size"
+            >Bank</span
+          >
         </h1>
+      </a>
+      <h1 class="header__title header__title--fontStyle">Bienvenido,</h1>
     </header>
 
     <div class="section">
-        <section class="section__space">
+      <section class="section__space">
+        <form action="" class="section__form">
+          <div class="section__spaceTitle">
+            <h2 class="section__title">Transferir dinero</h2>
+          </div>
+          <label for="">Nombre </label>
+          <div class="section__inputs">
+            <input
+              class="section__inputs--size"
+              type="text"
+              placeholder=" Nombre de quien recibe"
+            />
+          </div>
+          <label for="">Tipo de documento</label>
+          <div class="section__inputs">
+            <select class="section__inputs--size" name="tipoDocId" id="docId">
+              <option value="">Seleccionar...</option>
+              <option value="Cc">Cedula de ciudadanía</option>
+              <option value="">Cedula Extranjería</option>
+              <option value="">NIT</option>
+            </select>
+          </div>
+          <label for="">Documento </label>
+          <div class="section__inputs">
+            <input
+              class="section__inputs--size"
+              type="number"
+              placeholder=" Documento de esa persona/NIT "
+            />
+          </div>
+          <label for="">Tipo de cuenta</label>
+          <div class="section__inputs">
+            <select class="section__inputs--size" name="tipoCuenta" id="cuenta">
+              <option value="">Seleccionar...</option>
+              <option value="">Ahorros</option>
+              <option value="">Corriente</option>
+            </select>
+          </div>
+          <label for="">Numero de cuenta</label>
+          <div class="section__inputs">
+            <input
+              id="cuentaOrigen"
+              class="section__inputs--size"
+              type="number"
+              placeholder=" Numero de cuenta"
+            />
+          </div>
+          <label for="">Numero de cuenta a Transferir</label>
+          <div class="section__inputs">
+            <input
+              id="cuentaDestino"
+              class="section__inputs--size"
+              type="number"
+              placeholder=" Numero de cuenta"
+            />
+          </div>
+          <label for="">Dinero a transferir</label>
+          <div class="section__inputs">
+            <input
+              id="dinero"
+              class="section__inputs--size"
+              type="number"
+              placeholder=" ¿Cuánto?"
+            />
+          </div>
 
-
-            <form action="" class="section__form">
-                <div class="section__spaceTitle">
-                    <h2 class="section__title">Transferir dinero</h2>
-                </div>
-                <label for="">Nombre </label>
-                <div class="section__inputs">
-                    <input class="section__inputs--size" type="text" placeholder=" Nombre de quien recibe">
-                </div>
-                <label for="">Tipo de documento</label>
-                <div class="section__inputs">
-                    <select class="section__inputs--size" name="tipoDocId" id="docId">
-                        <option value="">Seleccionar...</option>
-                        <option value="Cc">Cedula de ciudadanía</option>
-                        <option value="">Cedula Extranjería</option>
-                        <option value="">NIT</option>
-                    </select>
-                </div>
-                <label for="">Documento </label>
-                <div class="section__inputs">
-                    <input class="section__inputs--size" type="number" placeholder=" Documento de esa persona/NIT ">
-                </div>
-                <label for="">Tipo de cuenta</label>
-                <div class="section__inputs">
-                    <select class="section__inputs--size" name="tipoCuenta" id="cuenta" >
-                        <option value="">Seleccionar...</option>
-                        <option value="">Ahorros</option>
-                        <option value="">Corriente</option>
-                    </select>
-                </div>
-                <label for="">Numero de cuenta</label>
-                <div class="section__inputs">
-                    <input class="section__inputs--size" type="number" placeholder=" Numero de cuenta">
-                </div>
-                    <label for="">Dinero a transferir</label>
-                <div class="section__inputs">
-                    <input class="section__inputs--size" type="number" placeholder=" ¿Cuánto?">
-                </div>
-
-                <div class="section__Buttons">
-                    <input class="section__ButtonsStyle" type="submit" value="Transferir">
-                    <input class="section__ButtonsStyle" type="button" value="Cancelar">
-                </div>
-            </form>
-        </section>
+          <div class="section__Buttons">
+            <input
+              id="transferir"
+              class="section__ButtonsStyle"
+              type="submit"
+              onclick="transferirDinero()"
+              value="Transferir"
+            />
+            <input
+              class="section__ButtonsStyle"
+              type="button"
+              value="Cancelar"
+            />
+          </div>
+        </form>
+      </section>
     </div>
 
-</body>
-
+    <script src="../assets/js/usuarios.js"></script>
+    <script src="../assets/js/tranferencias.js"></script>
+  </body>
 </html>

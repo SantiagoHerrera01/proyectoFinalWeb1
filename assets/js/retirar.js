@@ -3,10 +3,10 @@ const numeroCuenta = document.getElementById("cuenta");
 const retiro = document.getElementById("retiro");
 const contraseña = document.getElementById("contraseña")
 
-// const usuarios = [
-//     { usuario: "juan", contraseña: "1204", saldo: 1000, cuenta: "1000637874" },
-//     { usuario: "santiago", contraseña: "1204", saldo: 1500, cuenta: "1000637875" },
-// ];
+const usuarios = [
+    { usuario: "juan", contraseña: "1204", saldo: 1000, cuenta: "1000637874" },
+    { usuario: "santiago", contraseña: "1204", saldo: 1500, cuenta: "1000637875" },
+];
 
 const retirarDinero = () => {
     const numeroCuentaRetirar = numeroCuenta.value;

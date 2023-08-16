@@ -2,10 +2,10 @@ const botonConsignar = document.getElementById("consignar");
 const numeroCuenta = document.getElementById("cuenta");
 const cantidad = document.getElementById("cantidad");
 
-// const usuarios = [
-//     { usuario: "juan", contraseña: "1204", saldo: 1000, cuenta: "1000637874" },
-//     { usuario: "santiago", contraseña: "1204", saldo: 1500, cuenta: "1000637875" },
-// ];
+ const usuarios = [
+     { usuario: "juan", contraseña: "1204", saldo: 1000, cuenta: "1000637874" },
+     { usuario: "santiago", contraseña: "1204", saldo: 1500, cuenta: "1000637875" },
+ ];
 
 const consignarDinero = () => {
     const numeroCuentaConsignar = numeroCuenta.value;

@@ -55,8 +55,13 @@
   border: none;
   border-radius: 45px;
   cursor: pointer;
+  text-align: center;
 }
 .section__ButtonsStyle:hover {
   transition: 600ms;
   background-color: black;
+}
+.section__ButtonsStyle--position {
+  margin-top: 1rem;
+  margin-left: 2rem;
 }/*# sourceMappingURL=transferencias.css.map */

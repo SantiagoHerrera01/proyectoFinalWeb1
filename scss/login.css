@@ -141,7 +141,8 @@ a {
 }
 
 .buttons__space {
-  display: flex;
+  display: none;
+  /* display: flex; */
   justify-content: center;
   margin-top: 3rem;
 }
@@ -169,4 +170,28 @@ a {
   display: block;
   font-size: 20px;
   color: black;
+}
+
+.index {
+  display: block;
+}
+
+.tranferencias {
+  display: none;
+}
+
+.Movimientos {
+  display: none;
+}
+
+.movimiento {
+  margin-top: 1rem;
+}
+
+.retirar {
+  display: none;
+}
+
+.consignacion {
+  display: none;
 }/*# sourceMappingURL=login.css.map */

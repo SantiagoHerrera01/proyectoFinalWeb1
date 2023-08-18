@@ -11,20 +11,6 @@ const contraseña = document.getElementById("password");
 
 const users = JSON.parse(localStorage.getItem('users')) || [];
 
-let inicioSesion;
-let intentosInicio = 0;
-const maximoIntentosInicio = 3;
-
-// const usuarios = [
-//   { usuario: "juan", contraseña: "1204", saldo: "1000", cuenta: "1000637874" },
-//   {
-//     usuario: "santiago",
-//     contraseña: "1204",
-//     saldo: "1500",
-//     cuenta: "1000637875",
-//   },
-// ];
-
 btnIniciarSesion.addEventListener("click", () => {
   popUp.showModal();
 });
@@ -39,54 +25,86 @@ buttonRegister.addEventListener("click", (e) => {
   popUpDos.showModal();
 });
 
-
-
 const mostrarBotones = () => {
   popUp.close();
-  buttons.innerHTML = `
-    <div class="section__Butons">
-    <a href="/html/transferencias.html"><button class="buttons__space__transfer"><div><i class="fa-solid fa-money-bill-transfer icons"></i></div>Transferir Dinero</button></a>
 
-    <a href="/html/retiros.html"><button class="buttons__space__transfer"><div><i class="fa-solid fa-down-long icons"></i></div>Retirar Dinero </button></a>
-
-    <a href="/html/consignacion.html"><button class="buttons__space__transfer"><div><i class="fa-solid fa-hand-holding-dollar icons"></i></div>Consignar Dinero</button></a>
-
-    <a href="/html/movimientos.html"><button class="buttons__space__transfer"><div><i class="fa-solid fa-receipt icons"></i></div> Movimientos</button></a>
-    </div>
-    `;
+  buttons.style.display = "flex"
 };
 
-// const iniciarSesion = () => {
-//   const usuarioSesion = usuario.value;
-//   const contraseñaSesion = contraseña.value;
+const buttonRetirar = document.getElementById("buttonRetirar")
+const buttonTransferencia = document.getElementById("buttonTransferencia")
+const buttonConsignacion = document.getElementById("buttonConsignacion")
+const buttonMovimientos = document.getElementById("buttonMovimientos")
 
-//   const usuarioEncontrado = users.find(
-//     (user) =>
-//       user.nombre === usuarioSesion && user.contraseña === contraseñaSesion
-//   );
+const botonVolverRetiro = document.getElementById("volver")
+const botonVolverConsignacion = document.getElementById("volverC")
+const botonVolverTransferencia = document.getElementById("volverT")
+const botonVolverMovimientos = document.getElementById("volverM")
 
-//   console.log(usuarioEncontrado);
-//   console.log(usuarioSesion);
-//   console.log(contraseñaSesion);
+const index = document.getElementById("index")
+const retirar = document.getElementById("retirar")
+const consignacion = document.getElementById("consignacion")
+const transferencias = document.getElementById("transferencias")
+const Movimientos = document.getElementById("Movimientos")
 
-//   if (usuarioEncontrado) {
-//     inicioSesion = usuarioEncontrado;
-//     intentosInicio = 0;
-//     popUp.close();
-//     mostrarBotones();
-//   } else {
-//     intentosInicio++;
-//     if (intentosInicio >= maximoIntentosInicio) {
-//       alert("error ");
-//     } else {
-//       popUp.close();
-//       alert("error Definitivo");
-//     }
-//   }
-// };
+if(buttonRetirar){
 
+    buttonRetirar.addEventListener("click", () =>{
+      index.style.display = "none"
+      retirar.style.display = "block"
+    })
+}
 
-console.log(users.nombre)
+if(buttonConsignacion){
+
+  buttonConsignacion.addEventListener("click", () =>{
+    index.style.display = "none"
+    consignacion.style.display = "block"
+  })
+}
+
+if(buttonTransferencia){
+
+  buttonTransferencia.addEventListener("click", () =>{
+    index.style.display = "none"
+    transferencias.style.display = "block"
+  })
+}
+
+if(buttonMovimientos){
+
+  buttonMovimientos.addEventListener("click", () =>{
+    index.style.display = "none"
+    Movimientos.style.display = "block"
+  })
+}
+
+if(botonVolverRetiro || botonVolverConsignacion || botonVolverTransferencia || botonVolverMovimientos){
+
+  botonVolverRetiro.addEventListener("click", () =>{
+      // index.replaceWith(retirar)
+      index.style.display = "block"
+      retirar.style.display = "none"
+    })
+
+    botonVolverConsignacion.addEventListener("click", () =>{
+      // index.replaceWith(retirar)
+      index.style.display = "block"
+      consignacion.style.display = "none"
+    })
+
+    botonVolverTransferencia.addEventListener("click", () =>{
+      // index.replaceWith(retirar)
+      index.style.display = "block"
+      transferencias.style.display = "none"
+    })
+
+    botonVolverMovimientos.addEventListener("click", () =>{
+      // index.replaceWith(retirar)
+      index.style.display = "block"
+      Movimientos.style.display = "none"
+    })
+}
 
 
 

@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banco DJS</title>
     <link rel="stylesheet" href="./scss/login.css">
+    <link rel="stylesheet" href="../scss/transferencias.css">
+    <link rel="stylesheet" href="../scss/retiros.css">
+    <link rel="stylesheet" href="./scss/movimientos.scss">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
@@ -18,52 +21,205 @@
     <header class="header">
         <h1 class="header__title header__title--fontStyle">DJS <span
                 class="header__title__name header__title__name--size">Bank</span></h1>
-        <h1 class="header__title header__title--fontStyle">Bienvenido,
+        <h1 class="header__title header__title--fontStyle"> <span class="header__title header__title--fontStyle"
+                id="inicioSesionText">Bienvenido</span>
             <button id="button__Iniciar__sesion" class="header__buttonIniciar">Iniciar Sesión</button>
 
-            <button class="header__buttonIniciar" id="registrarU" onclick="registrarUsuarioVista()"> Registrarse</button>
+            <button class="header__buttonIniciar" id="registrarU" onclick="registrarUsuarioVista()">
+                Registrarse</button>
         </h1>
     </header>
+    <div id="index" class="index">
 
+        <div id="buttons" class="buttons__space">
+            <div class="section__Butons">
+                <button id="buttonTransferencia" class="buttons__space__transfer">
+                    <div><i class="fa-solid fa-money-bill-transfer icons"></i></div>Transferir Dinero
+                </button></a>
 
+                <button id="buttonRetirar" class="buttons__space__transfer">
+                    <div><i class="fa-solid fa-down-long icons"></i></div>Retirar Dinero
+                </button></a>
 
-    <div id="buttons" class="buttons__space"></div>
-    <div class="letters">
-        <section class="letters__space">
-            <img src="/assets/img/img-banner-normal+2.png" alt="">
-            <div>
-                <span class="letters__space__Info">Generamos un impacto positivo en la sociedad, transformando la vida
-                    de las personas que hacen parte de los diferentes programas y esquemas que apoyamos en nuestra
-                    organización.</span>
+                <button id="buttonConsignacion" class="buttons__space__transfer">
+                    <div><i class="fa-solid fa-hand-holding-dollar icons"></i></div>Consignar Dinero
+                </button></a>
+
+                <button id="buttonMovimientos" class="buttons__space__transfer">
+                    <div><i class="fa-solid fa-receipt icons"></i></div> Movimientos
+                </button></a>
             </div>
-        </section>
+        </div>
+        <div class="letters" id="divInicio">
+            <section class="letters__space">
+                <img src="/assets/img/img-banner-normal+2.png" alt="">
+                <div>
+                    <span class="letters__space__Info">Generamos un impacto positivo en la sociedad, transformando la
+                        vida
+                        de las personas que hacen parte de los diferentes programas y esquemas que apoyamos en nuestra
+                        organización.</span>
+                </div>
+            </section>
+        </div>
+        <!-- <div class="login"> -->
+
+        <dialog id="login__popUp" class="login__popUp">
+
+            <form action="" id="loginForm" class="login__form">
+                <h1 class="login__title">Iniciar Sesión</h1>
+                <span class="login__title--description">Por favor inicie sesión</span>
+                <div class="login__input">
+                    <input type="email" placeholder="Nombre de usuario o Correo electronico" id="usuario" required
+                        autofocus>
+                </div>
+                <div class="login__input">
+                    <input type="password" placeholder="Contraseña" id="password" required>
+                </div>
+                <div class="login__buttons">
+
+                    <input type="submit" value="Iniciar Sesíon" id="IniciarSesion" class="login__buttons__form">
+
+                    <button class="login__buttons__form" id="buttonCancel"> Cancelar</button>
+                </div>
+        </dialog>
+        <!-- </div> -->
+
     </div>
-    <!-- <div class="login"> -->
 
-    <dialog id="login__popUp" class="login__popUp">
+    <div id="retirar" class="retirar">
+        <div class="section section--position" id="divRetirar">
+            <section class="section__spaceR">
 
-        <form action="" id="loginForm" class="login__form">
-            <h1 class="login__title">Iniciar Sesión</h1>
-            <span class="login__title--description">Por favor inicie sesión</span>
-            <div class="login__input">
-                <input type="email" placeholder="Nombre de usuario o Correo electronico" id="usuario" required autofocus>
-            </div>
-            <div class="login__input">
-                <input type="password" placeholder="Contraseña" id="password" required>
-            </div>
-            <div class="login__buttons">
+                <form action="" class="section__form">
 
-                <input type="submit" value="Iniciar Sesíon" id="IniciarSesion" class="login__buttons__form">
+                    <div class="section__spaceTitle">
+                        <h2 class="section__title">Retirar Dinero</h2>
+                    </div>
 
-                <button class="login__buttons__form" id="buttonCancel"> Cancelar</button>
-            </div>
-    </dialog>
-    <!-- </div> -->
+                    <div class="section__spaceTitle">
+                        <span id="saldoLabel">Su dinero total es: </span>
+                    </div>
 
+                    <label for="">¿Cuánto? </label>
+                    <div class="section__inputs">
+                        <input class="section__inputs--size" type="number" id="retiro"
+                            placeholder="Digite el dinero a retirar">
+                    </div>
+                    <label>Pin: </label>
+                    <div class="section__inputs">
+                        <input class="section__inputs--size" type="password" id="contraseña"
+                            placeholder="Ingrese su pin">
+                    </div>
+                    <div class="section__Buttons">
+                        <input id="btnAceptar" class="section__ButtonsStyle" value="Aceptar">
+                        <input class="section__ButtonsStyle" id="volver" type="button" value="volver">
+                    </div>
+                </form>
+            </section>
+        </div>
+
+    </div>
+
+    <div id="consignacion" class="consignacion">
+        <div class="section section--position">
+            <section class="section__spaceR">
+                <div class="section__spaceTitle">
+                    <h2 class="section__title">Consignar Dinero</h2>
+                </div>
+
+                <div class="section__spaceTitle">
+                    <span id="labelConsignacion">Su dinero total es: "DineroCliente"</span>
+                </div>
+
+                <form action="" class="section__form">
+                    <label class="section__spaceTitle">¿Cuánto?</label>
+                    <div class="section__inputs">
+                        <input class="section__inputs--size" type="number" id="cantidad"
+                            placeholder="Cuanto desea Consignar">
+                    </div>
+                    <div class="section__Buttons">
+                        <button class="section__ButtonsStyle" id="consignar">Consignar</button>
+                        <input class="section__ButtonsStyle" id="volverC" type="button" value="volver">
+                    </div>
+                </form>
+            </section>
+
+        </div>
+
+    </div>
+
+    <div id="transferencias" class="tranferencias">
+        <div class="section">
+            <section class="section__space">
+                <div action="" class="section__form">
+                    <div class="section__spaceTitle">
+                        <h2 class="section__title">Transferir dinero</h2>
+                    </div>
+                    <label for="">Nombre </label>
+                    <div class="section__inputs">
+                        <input class="section__inputs--size" type="text" placeholder=" Nombre de quien recibe" />
+                    </div>
+                    <label for="">Tipo de documento</label>
+                    <div class="section__inputs">
+                        <select class="section__inputs--size" name="tipoDocId" id="docId">
+                            <option value="">Seleccionar...</option>
+                            <option value="Cc">Cedula de ciudadanía</option>
+                            <option value="">Cedula Extranjería</option>
+                            <option value="">NIT</option>
+                        </select>
+                    </div>
+                    <label for="">Documento </label>
+                    <div class="section__inputs">
+                        <input class="section__inputs--size" type="number"
+                            placeholder=" Documento de esa persona/NIT " />
+                    </div>
+                    <label for="">Tipo de cuenta</label>
+                    <div class="section__inputs">
+                        <select class="section__inputs--size" name="tipoCuenta" id="cuenta">
+                            <option value="">Seleccionar...</option>
+                            <option value="">Ahorros</option>
+                            <option value="">Corriente</option>
+                        </select>
+                    </div>
+                    <label for="">Numero de cuenta</label>
+                    <label for="">Numero de cuenta a Transferir</label>
+                    <div class="section__inputs">
+                        <input id="cuentaDestino" class="section__inputs--size" type="number"
+                            placeholder=" Numero de cuenta" />
+                    </div>
+                    <label for="">Dinero a transferir</label>
+                    <div class="section__inputs">
+                        <input id="dinero" class="section__inputs--size" type="number" placeholder=" ¿Cuánto?" />
+                    </div>
+
+                    <div class="section__Buttons">
+                        <input id="transferir" class="section__ButtonsStyle" type="submit" onclick="transferirDinero()"
+                            value="Transferir" />
+                        <input class="section__ButtonsStyle" id="volverT" type="button" value="volver">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div id="Movimientos" class="Movimientos">
+        <div class="section">
+            <section class="section__space">
+                <div class="section__spaceTitle">
+                    <h2 class="section__title">Movimientos</h2>
+                    <div id="movimientosContainer" ></div>
+                    <input class="section__ButtonsStyle section__ButtonsStyle--position" id="volverM" type="button" value="volver">
+                </div>
+
+                
+                    
+                
+            </section>
+            
+        </div>
+    </div>
     <dialog class="login__popUp login__popUp--space" id="popUpDos"></dialog>
 
-
-    <script src="./assets/js/usuarios.js"></script>
     <script src="./assets/js/popUp.js"></script>
     <script src="./assets/js/iniciarSesion.js"></script>
     <script src="./assets/js/register.js"></script>

@@ -123,32 +123,33 @@ a {
     margin-left: 10rem;
     height: 350px;
     width: 879px;
+
     &__space {
         display: flex;
         width: 100ch;
         background-color: rgb(224, 224, 224);
         border-radius: 10px;
         box-shadow: 3px 4px 10px;
-        
-    
 
-    &__Info {
-        display: flex;
-        font-size: 22px;
-        text-align: center;
-        margin-left: 1rem;
-        margin-right: 1rem;
-        margin-top: 6rem;
 
+
+        &__Info {
+            display: flex;
+            font-size: 22px;
+            text-align: center;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            margin-top: 6rem;
+
+        }
+
+        img {
+            width: 20rem;
+            height: 20rem;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
     }
-
-    img {
-        width: 20rem;
-        height: 20rem;
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
-    }
-}
 }
 
 .section__Butons {
@@ -161,9 +162,11 @@ a {
 }
 
 .buttons__space {
-    display: flex;
+    display: none;
+    /* display: flex; */
     justify-content: center;
     margin-top: 3rem;
+
 
     &__transfer {
         margin: 0 1rem;
@@ -191,4 +194,28 @@ a {
     display: block;
     font-size: 20px;
     color: black;
+}
+
+.index {
+    display: block;
+}
+
+.tranferencias {
+    display: none;
+}
+
+.Movimientos {
+    display: none;
+}
+
+.movimiento{
+    margin-top: 1rem;
+}
+
+.retirar {
+    display: none;
+}
+
+.consignacion {
+    display: none;
 }

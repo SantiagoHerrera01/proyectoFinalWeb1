@@ -59,9 +59,14 @@
         border: none;
         border-radius: 45px;
         cursor: pointer;
+        text-align: center;
         &:hover{
             transition: 600ms;
             background-color: black;
+        }
+        &--position{
+            margin-top: 1rem;
+            margin-left: 2rem;
         }
         
     }

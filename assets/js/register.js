@@ -44,9 +44,9 @@ const registrarUsuarioVista = () => {
     if(localStorage.getItem(correo)== null){
       const users = { nombre: nombre, correo: correo, numeroCuenta: numeroCuenta, saldo:200000, contraseña: contraseña};
 
-      localStorage.setItem(correo, JSON.stringify(users)); // Corregido para pasar el arreglo 'users'
+      localStorage.setItem(correo, JSON.stringify(users));
       alert("Registro exitoso")
-      console.log(users.contraseña)
+      popUpDos.close()
     }
       }catch (error){
           console.log("Error",error)
@@ -54,4 +54,34 @@ const registrarUsuarioVista = () => {
     });
     
   };
-  // console.log(users)
+
+  let movimientos =[]
+
+const agregarMovimiento = (tipo, cantidad) => {
+  const movimiento = {
+    tipo,
+    cantidad,
+    fecha: new Date().toLocaleString(),
+  };
+  movimientos.push(movimiento)
+
+  console.log(movimientos);
+};
+
+const pintarMovimientos = () => {
+  const movimientosContainer = document.getElementById("movimientosContainer");
+  let movimientosHTML = ""; 
+
+  for (const movimiento of movimientos) {
+    movimientosHTML += `
+      <div class="movimiento">
+        <p class="movimiento__P">Tipo: ${movimiento.tipo}</p>
+        <p>Cantidad: ${movimiento.cantidad}</p>
+        <p>Fecha: ${movimiento.fecha}</p>
+      </div>
+    `;
+  }
+
+  movimientosContainer.innerHTML = movimientosHTML;
+};
+
